@@ -9,6 +9,8 @@ const startGameButton = document.getElementById('start-game-button');
 const playerNamesInput = document.querySelector('.player-names-input');
 const player1Input = document.getElementById('player1-name');
 const player2Input = document.getElementById('player2-name');
+const difficultySelect = document.getElementById('difficulty');
+const difficultySelectionDiv = document.querySelector('.difficulty-selection');
 
 let cards = [];
 let flippedCards = [];
@@ -17,18 +19,19 @@ let player1Score = 0;
 let player2Score = 0;
 let currentPlayer = 1;
 let canFlip = true;
-let player1Name = 'Jugador 1'; // Valores por defecto
+let player1Name = 'Jugador 1';
 let player2Name = 'Jugador 2';
+let numPairs = 8; // Valor por defecto para Normal (4x4)
 
-// Array de pares de iconos
-const cardPairs = [
-    'fa-fire', 'fa-fire',
-    'fa-shield-alt', 'fa-shield-alt',
-    'fa-exclamation-triangle', 'fa-exclamation-triangle',
-    'fa-first-aid', 'fa-first-aid',
-    'fa-house-damage', 'fa-house-damage',
-    'fa-car-crash', 'fa-car-crash'
+// Array base de iconos
+const baseCardIcons = [
+    'fa-fire', 'fa-shield-alt', 'fa-exclamation-triangle',
+    'fa-first-aid', 'fa-house-damage', 'fa-car-crash',
+    'fa-bolt', 'fa-water', 'fa-radiation', 'fa-biohazard',
+    'fa-umbrella', 'fa-wind', 'fa-smog', 'fa-thermometer-half'
 ];
+
+let cardPairs = [];
 
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -50,7 +53,37 @@ function createCard(iconClass) {
     return card;
 }
 
+function setupCardPairs(numPairsToUse) {
+    const selectedIcons = baseCardIcons.slice(0, numPairsToUse);
+    cardPairs = [...selectedIcons, ...selectedIcons];
+    shuffleArray(cardPairs);
+    numPairs = numPairsToUse;
+
+    // Establecer el número de columnas para la cuadrícula
+    gameContainer.style.gridTemplateColumns = `repeat(4, 100px)`;
+}
+
 function startGame() {
+    const difficulty = parseInt(difficultySelect.value);
+    let cols;
+    switch (difficulty) {
+        case 6:
+            cols = 4;
+            break;
+        case 8:
+            cols = 4;
+            break;
+        case 10:
+            cols = 4;
+            break;
+        default:
+            cols = 4;
+            break;
+    }
+    gameContainer.style.gridTemplateColumns = `repeat(${cols}, 100px)`; // Aseguramos la configuración de columnas
+
+    setupCardPairs(difficulty);
+
     player1Name = player1Input.value.trim() || 'Jugador 1';
     player2Name = player2Input.value.trim() || 'Jugador 2';
 
@@ -58,10 +91,9 @@ function startGame() {
     player2NameDisplay.textContent = player2Name;
     currentPlayerNameDisplay.textContent = player1Name;
 
+    difficultySelectionDiv.style.display = 'none';
     playerNamesInput.style.display = 'none';
-    gameContainer.style.display = 'grid'; // Asegurar que el juego se muestre
-
-    shuffleArray(cardPairs);
+    gameContainer.style.display = 'grid';
     gameContainer.innerHTML = '';
     cards = cardPairs.map(pair => createCard(pair));
     cards.forEach(card => gameContainer.appendChild(card));
@@ -140,7 +172,7 @@ function switchPlayer() {
     currentPlayer = currentPlayer === 1 ? 2 : 1;
     updateTurnDisplay();
     Swal.fire({
-        title: `Turno de ${currentPlayer === 1 ? player1Name : player2Name}`,
+        title: `TURNO DE  ${currentPlayer === 1 ? player1Name : player2Name}`,
         icon: 'info',
         timer: 1500,
         showConfirmButton: false
@@ -159,22 +191,23 @@ function checkGameEnd() {
         } else if (player2Score > player1Score) {
             winner = player2Name;
         } else {
-            winner = 'Empate';
+            winner = 'EMPATE';
         }
         Swal.fire({
-            title: '¡Juego Terminado!',
-            text: winner === 'Empate' ? '¡Es un Empate!' : `¡El ganador es: ${winner}! (${player1Name}: ${player1Score}, ${player2Name}: ${player2Score})`,
+            title: '¡FELICITACIONES!',
+            text: winner === 'EMPATE' ? '¡ES UN EMPATE!' : `¡EL GANADOR ES: ${winner}!`,
             icon: 'success',
-            confirmButtonText: 'Jugar de Nuevo'
+            confirmButtonText: 'JUGAR DE NUEVO'
         }).then(() => {
-            resetGame(); // Llamamos a resetGame en lugar de setupGame directamente
+            resetGame();
         });
     }
 }
 
 function resetGame() {
-    playerNamesInput.style.display = 'flex'; // Mostrar la entrada de nombres
-    gameContainer.style.display = 'none';    // Ocultar el juego
+    difficultySelectionDiv.style.display = 'flex';
+    playerNamesInput.style.display = 'flex';
+    gameContainer.style.display = 'none';
     player1Input.value = '';
     player2Input.value = '';
     player1Name = 'Jugador 1';
@@ -191,11 +224,12 @@ function resetGame() {
     player2Score = 0;
     currentPlayer = 1;
     canFlip = true;
-    gameContainer.innerHTML = ''; // Limpiar las cartas del juego
+    gameContainer.innerHTML = '';
+    gameContainer.className = 'memory-game'; // Resetear clases de dificultad
 }
 
 resetButton.addEventListener('click', resetGame);
 startGameButton.addEventListener('click', startGame);
 
-// Ocultar el juego al inicio hasta que se ingresen los nombres
+// Ocultar el juego al inicio
 gameContainer.style.display = 'none';
