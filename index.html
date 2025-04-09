@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Trivia divertida</title>
+</head>
+<body>
+    <main>
+        <h1>PREPARACIÓN PARA EMERGENCIAS</h1>
+        <div id="quiz-container">
+            <h2 id="pregunta"></h2>
+            <div id="opciones"></div>
+
+            <div id="flechas-container">
+                <div id="resultado"></div>
+                <button id="siguiente-btn" aria-label="Pregunta siguiente"><i class="fas fa-arrow-right"></i></button>
+            </div>
+            <button onclick="reiniciarJuego()" id="reiniciar-btn">REINICIAR JUEGO</button>
+        </div>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>
