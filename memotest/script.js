@@ -23,13 +23,8 @@ let player1Name = 'Jugador 1';
 let player2Name = 'Jugador 2';
 let numPairs = 8; // Valor por defecto para Normal (4x4)
 
-// Array base de iconos
-const baseCardIcons = [
-    'fa-fire', 'fa-shield-alt', 'fa-exclamation-triangle',
-    'fa-first-aid', 'fa-house-damage', 'fa-car-crash',
-    'fa-bolt', 'fa-water', 'fa-radiation', 'fa-biohazard',
-    'fa-umbrella', 'fa-wind', 'fa-smog', 'fa-thermometer-half'
-];
+// Array base de nombres de imágenes
+const baseCardImages = Array.from({ length: 15 }, (_, i) => `img${i + 1}.jpg`);
 
 let cardPairs = [];
 
@@ -40,13 +35,13 @@ function shuffleArray(array) {
     }
 }
 
-function createCard(iconClass) {
+function createCard(imageSrc) {
     const card = document.createElement('div');
     card.classList.add('card');
     card.innerHTML = `
         <div class="card-inner">
             <div class="card-front"><i class="fas fa-question"></i></div>
-            <div class="card-back"><i class="fas ${iconClass}"></i></div>
+            <div class="card-back"><img src="./img/${imageSrc}" alt="Imagen de la carta"></div>
         </div>
     `;
     card.addEventListener('click', flipCard);
@@ -54,8 +49,8 @@ function createCard(iconClass) {
 }
 
 function setupCardPairs(numPairsToUse) {
-    const selectedIcons = baseCardIcons.slice(0, numPairsToUse);
-    cardPairs = [...selectedIcons, ...selectedIcons];
+    const selectedImages = baseCardImages.slice(0, numPairsToUse);
+    cardPairs = [...selectedImages, ...selectedImages];
     shuffleArray(cardPairs);
     numPairs = numPairsToUse;
 
@@ -122,10 +117,13 @@ function flipCard() {
 
 function checkForMatch() {
     const [card1, card2] = flippedCards;
-    const icon1 = card1.querySelector('.card-back i').classList[1];
-    const icon2 = card2.querySelector('.card-back i').classList[1];
+    const image1Src = card1.querySelector('.card-back img').src;
+    const image2Src = card2.querySelector('.card-back img').src;
 
-    if (icon1 === icon2) {
+    const imageName1 = image1Src.split('/').pop();
+    const imageName2 = image2Src.split('/').pop();
+
+    if (imageName1 === imageName2) {
         card1.classList.add('matched');
         card2.classList.add('matched');
         matchedCards.push(card1, card2);
@@ -172,7 +170,7 @@ function switchPlayer() {
     currentPlayer = currentPlayer === 1 ? 2 : 1;
     updateTurnDisplay();
     Swal.fire({
-        title: `TURNO DE  ${currentPlayer === 1 ? player1Name : player2Name}`,
+        title: `TURNO DE  ${currentPlayer === 1 ? player1Name : player2Name}`,
         icon: 'info',
         timer: 1500,
         showConfirmButton: false

@@ -141,8 +141,8 @@ h1 {
 }
 
 .card {
-    width: 100px;
-    height: 100px;
+    width: 120px; /* Aumenta el ancho */
+    height: 120px; /* Aumenta el alto */
     background-color: #ecf0f1; /* Very Light Grey */
     border-radius: 8px;
     display: flex;
@@ -154,6 +154,12 @@ h1 {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     transform-style: preserve-3d;
+}
+.card-back img {
+    width: 100%; 
+    height: 100%; /* Ajusta el alto al 80% del contenedor */
+    object-fit:cover; /* Asegura que la imagen se ajuste dentro sin recortarse, manteniendo su proporción */
+    border-radius: 8px;
 }
 
 .card.flipped {
