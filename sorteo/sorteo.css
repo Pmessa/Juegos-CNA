@@ -1,0 +1,31 @@
+#nombres-container {
+    position: relative;
+    width: 90%; /* Aumentamos el ancho */
+    height: 400px; /* Aumentamos la altura */
+    border: 1px dashed #ccc;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.nombre-participante {
+    position: absolute;
+    background-color: #e9ecef;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    cursor: pointer; /* Para indicar que se puede interactuar */
+    z-index: 1; /* Aseguramos que los nombres estén por encima del fondo */
+}
+
+.nombre-participante.ganador {
+    font-size: 1.2em; /* Aumentamos el tamaño de la fuente del ganador */
+    z-index: 10; /* Aseguramos que el ganador esté al frente */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Añadimos una ligera sombra para resaltarlo */
+}
+
+#resultado {
+    margin-top: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
