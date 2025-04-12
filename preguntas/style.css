@@ -22,8 +22,8 @@ main {
   text-align: center;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  /* height: 100vw; */
 }
 
 h1 {
@@ -71,7 +71,7 @@ h1 {
 }
 
 h2 {
-  max-width: 80%;
+  max-width: 100%;
   border-radius: 10px;
   padding: 15px;
   background: #fdfdfd;
@@ -133,6 +133,7 @@ button:hover {
 
 #flechas-container {
   display: flex;
+  align-items: center;
   margin-left: 20px;
   margin-top: 0px;
 }
@@ -160,6 +161,7 @@ button:hover {
 }
 
 #resultado {
+  width: 100vw;
   margin-top: 20px;
   font-size: 50px;
   font-weight: bold;
@@ -169,7 +171,7 @@ button:hover {
 
 #reiniciar-btn {
   display: none;
-  margin-top: 80px;
+  margin-top: 50px;
 }
 
 #confetti-container {
