@@ -5,23 +5,36 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <title>Trivia divertida</title>
 </head>
 <body>
     <main>
-        <h1>PREPARACIÓN PARA EMERGENCIAS</h1>
-        <div id="quiz-container">
+        <div id="nombre-container">
+            <h1>Ingresa tu nombre</h1>
+            <input type="text" id="nombre-input" placeholder="Tu nombre">
+            <button id="comenzar-btn">Comenzar</button>
+        </div>
+        <div id="temas-container" style="display: none;">
+            <h1>Selecciona un tema</h1>
+            <div id="temas">
+                <button class="tema-btn" data-tema="grupo1">Tema 1</button>
+                <button class="tema-btn" data-tema="grupo2">Tema 2</button>
+                <button class="tema-btn" data-tema="grupo3">Tema 3</button>
+                <button class="tema-btn" data-tema="grupo4">Tema 4</button>
+            </div>
+        </div>
+        <div id="quiz-container" style="display: none;">
             <h2 id="pregunta"></h2>
             <div id="opciones"></div>
-
             <div id="flechas-container">
                 <div id="resultado"></div>
                 <button id="siguiente-btn" aria-label="Pregunta siguiente"><i class="fas fa-arrow-right"></i></button>
             </div>
             <button onclick="reiniciarJuego()" id="reiniciar-btn">REINICIAR JUEGO</button>
         </div>
+        <div id="confetti-container"></div> 
     </main>
-
     <script src="./script.js"></script>
 </body>
 </html>

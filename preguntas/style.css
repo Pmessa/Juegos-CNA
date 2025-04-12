@@ -1,8 +1,9 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-image: url("./img/Imagen1.png");
@@ -14,8 +15,9 @@ body {
   min-height: 100vh;
   height: 100%;
 }
+
 main {
-  display: flex; 
+  display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
@@ -23,19 +25,39 @@ main {
   width: 100%;
   height: 100%;
 }
+
 h1 {
-  color:#dcdcff;
+  color: #dcdcff;
   font-size: 80px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   justify-content: center;
   width: 100vw;
   align-items: center;
   margin-bottom: 80px;
- 
+}
+
+#nombre-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#nombre-input {
+  padding: 15px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  width: 300px;
+}
+
+#comenzar-btn {
+  padding: 15px 30px;
+  font-size: 24px;
 }
 
 #quiz-container {
-  background-color:transparent;
+  background-color: transparent;
   padding: 10px;
   border-radius: 20px;
   max-width: 80vw;
@@ -44,22 +66,20 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: auto; 
+  margin: auto;
   max-height: 100vh;
 }
-
-
 
 h2 {
   max-width: 80%;
   border-radius: 10px;
   padding: 15px;
   background: #fdfdfd;
-  color: #333;;
+  color: #333;
   font-size: 35px;
   margin-bottom: 20px;
+  text-align: center;
 }
-
 
 #opciones {
   display: grid;
@@ -69,13 +89,12 @@ h2 {
   margin-top: 20px;
 }
 
-
 .opcion {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 90%;
-  padding: 16px 24px;
+  padding: 20px 30px;
   border: none;
   border-radius: 10px;
   background-color: #f0f0f0;
@@ -83,6 +102,7 @@ h2 {
   transition: all 0.3s ease;
   font-size: 35px;
   font-weight: bold;
+  margin: 10px;
 }
 
 .opcion:hover {
@@ -106,14 +126,17 @@ button {
   color: white;
   transition: background 0.3s ease;
 }
+
 button:hover {
   background-image: linear-gradient(315deg, #5b0ea5 0%, #1a5edb 74%);
 }
-#flechas-container{
+
+#flechas-container {
   display: flex;
   margin-left: 20px;
   margin-top: 0px;
 }
+
 #siguiente-btn {
   width: 200px;
   padding: 12px 24px;
@@ -121,13 +144,13 @@ button:hover {
   margin-left: 1300px;
   font-size: 30px;
   font-weight: bold;
-  border: 1px solid #ccc; 
+  border: 1px solid #ccc;
   border-radius: 8px;
   cursor: pointer;
-  background-color: #ffffff; 
-  background-image: none; 
-  color: #333; 
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; 
+  background-color: #ffffff;
+  background-image: none;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 #siguiente-btn:hover {
@@ -137,14 +160,30 @@ button:hover {
 }
 
 #resultado {
-
   margin-top: 20px;
   font-size: 50px;
   font-weight: bold;
   color: #fffdfd;
+  text-align: center;
 }
 
 #reiniciar-btn {
   display: none;
   margin-top: 80px;
+}
+
+#confetti-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+
+.confeti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
 }
