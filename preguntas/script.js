@@ -285,8 +285,13 @@ function reiniciarJuego() {
     respuestasSeleccionadas = new Array(preguntas.length).fill(null);
     intentosPorPregunta = new Array(preguntas.length).fill(0);
     puntajePorPregunta = new Array(preguntas.length).fill(0);
-    mostrarPregunta();
-    document.getElementById("reiniciar-btn").style.display = "none";
+
+    // Ocultar el quiz y mostrar la pantalla de nombre
+    document.getElementById("quiz-container").style.display = "none";
+    document.getElementById("nombre-container").style.display = "block";
+
+    // Limpiar el campo de nombre para un nuevo jugador
+    document.getElementById("nombre-input").value = "";
 }
 
 document.getElementById("quiz-container").style.display = "none";
