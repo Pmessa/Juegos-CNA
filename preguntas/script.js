@@ -162,6 +162,55 @@ const grupo3Preguntas = [
     }
 ];
 
+const grupo4Preguntas = [
+
+    {
+        pregunta: "¿Quién debe comunicar el inicio y fin de trabajos que liberan humos y pueden activar detectores de incendio?",
+        opciones: ["Jefe de Turno", "Oficial de Radioprotección", "Técnico de Seguridad Industrial", "Responsable de la tarea"],
+        respuesta: 3,
+    },
+    {
+        pregunta: "¿Qué significa la alarma 'General'?",
+        opciones: ["Acción Urgente", "Acción Preventiva", "Concentración en los Puntos de Reunión", "Emergencia Convencional"],
+        respuesta: 2,
+    },
+    {
+        pregunta: "¿Qué acción se debe tomar ante una alarma de 'Fuga'?",
+        opciones: ["Abandonar normalmente el local", "Concentrarse en los Puntos de Reunión", "Abandonar rápidamente el local", "Acudir al lugar del evento"],
+        respuesta: 2,
+    },
+    {
+        pregunta: "¿Qué acción se debe tomar ante una alarma de 'Evacuación'?",
+        opciones: ["Abandonar rápidamente el local", "Abandonar normalmente el local", "Concentrarse en los Puntos de Reunión", "Acudir al lugar del evento"],
+        respuesta: 1,
+    },
+        {
+        pregunta: "¿En qué tipo de alarma se deben usar las salidas de emergencia?",
+        opciones: ["Evacuación", "Fuga", "Incendio", "General"],
+        respuesta: 1,
+    },
+    {
+        pregunta: "¿Qué se debe hacer si se abandona ZRC por puertas de emergencia durante una fuga?",
+        opciones: ["Regresar inmediatamente", "Permanecer fuera de ZRC y esperar instrucciones", "Dirigirse a los Puntos de Reunión", "Buscar refugio en otro edificio"],
+        respuesta: 1,
+    },
+    {
+        pregunta: "¿Qué señal indica la necesidad de concentrarse en los Puntos de Reunión?",
+        opciones: ["Alarma General", "Alarma de Fuga", "Alarma de Evacuación", "Alarma de Intrusión"],
+        respuesta: 0,
+    },
+    {
+        pregunta: "¿Qué debe hacer el personal al escuchar la alarma de Intrusión?",
+        opciones: ["Abandonar el edificio", "Dirigirse a los Puntos de Reunión", "Permanecer en su lugar de trabajo o buscar refugio", "Ayudar a la Brigada de Emergencia"],
+        respuesta: 2,
+    },
+    {
+        pregunta: "¿Qué se debe hacer si se activa un detector de incendio por trabajos con humos?",
+        opciones: ["Evacuar inmediatamente", "Ignorar la alarma", "Comunicar al Jefe de Turno para verificar la falsa alarma", "Dirigirse a los Puntos de Reunión"],
+        respuesta: 2,
+    },
+];
+
 let preguntas = [];
 let preguntaActual = 0;
 let puntaje = 0;
@@ -173,7 +222,22 @@ let nombreJugador = "";
 document.getElementById("comenzar-btn").addEventListener("click", () => {
     nombreJugador = document.getElementById("nombre-input").value;
     document.getElementById("nombre-container").style.display = "none";
-    document.getElementById("temas-container").style.display = "block";
+    document.getElementById("seleccion-tipo-container").style.display = "block";
+});
+
+document.querySelectorAll(".tipo-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+        const tipo = btn.dataset.tipo;
+        if (tipo === "cna") {
+            document.getElementById("seleccion-tipo-container").style.display = "none";
+            document.getElementById("temas-container").style.display = "block";
+        } else if (tipo === "contratista") {
+            seleccionarPreguntasAleatorias("grupo4");
+            document.getElementById("seleccion-tipo-container").style.display = "none";
+            document.getElementById("quiz-container").style.display = "block";
+            mostrarPregunta();
+        }
+    });
 });
 
 document.querySelectorAll(".tema-btn").forEach(btn => {
@@ -192,6 +256,7 @@ function seleccionarPreguntasAleatorias(tema) {
     if (tema === "grupo1") preguntasDisponibles = [...grupo1Preguntas];
     else if (tema === "grupo2") preguntasDisponibles = [...grupo2Preguntas];
     else if (tema === "grupo3") preguntasDisponibles = [...grupo3Preguntas];
+    else if (tema === "grupo4") preguntasDisponibles = [...grupo4Preguntas];
 
     preguntas = [];
     for (let i = 0; i < 5; i++) {
@@ -348,7 +413,7 @@ function reiniciarJuego() {
 
     // Ocultar el quiz y mostrar la pantalla de nombre
     document.getElementById("quiz-container").style.display = "none";
-    document.getElementById("nombre-container").style.display = "block";
+    document.getElementById("nombre-container").style.display = "flex";
 
     // Limpiar el campo de nombre para un nuevo jugador
     document.getElementById("nombre-input").value = "";
@@ -356,3 +421,4 @@ function reiniciarJuego() {
 
 document.getElementById("quiz-container").style.display = "none";
 document.getElementById("reiniciar-btn").style.display = "none";
+document.getElementById("seleccion-tipo-container").style.display = "none";
