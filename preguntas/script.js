@@ -28,28 +28,108 @@ const grupo1Preguntas = [
 
 const grupo2Preguntas = [
     {
-        pregunta: "¿Cuál es el océano más grande?",
-        opciones: ["Atlántico", "Índico", "Ártico", "Pacífico"],
-        respuesta: 3,
-    },
-    {
-        pregunta: "¿Qué gas es el más abundante en la atmósfera terrestre?",
-        opciones: ["Oxígeno", "Dióxido de carbono", "Nitrógeno", "Argón"],
+        pregunta: "¿Quién es responsable de emitir las alarmas acústicas desde la Sala de Control?",
+        opciones: ["Departamento de Protección Física", "Departamento de Radioprotección", "Departamentos Operaciones CNA I y CNA II", "Departamento de Seguridad Industrial"],
         respuesta: 2,
     },
     {
-        pregunta: "¿Quién escribió 'Don Quijote de la Mancha'?",
-        opciones: ["García Márquez", "Shakespeare", "Cervantes", "Dickens"],
+        pregunta: "¿Quién emite las sirenas externas del Sistema de Alerta Pública?",
+        opciones: ["Oficial de Radioprotección", "Técnico de Seguridad Industrial", "Oficial Protección Física o Auxiliar Protección Física", "Jefe de Turno"],
         respuesta: 2,
     },
     {
-        pregunta: "¿Cuál es el metal más abundante en la corteza terrestre?",
-        opciones: ["Hierro", "Aluminio", "Cobre", "Oro"],
+        pregunta: "¿Qué departamento coloca y retira la señalización en accesos de ZRC durante una alarma de Evacuación?",
+        opciones: ["Departamento de Protección Física", "Departamento de Radioprotección", "Departamento de Seguridad Industrial", "Departamentos Operaciones CNA I y CNA II"],
         respuesta: 1,
     },
     {
-        pregunta: "¿En qué continente se encuentra Egipto?",
-        opciones: ["Asia", "América", "África", "Europa"],
+        pregunta: "¿Qué departamento coloca y retira la señalización en accesos de Zona Convencional durante una alarma de Evacuación?",
+        opciones: ["Departamento de Protección Física", "Departamento de Radioprotección", "Departamento de Seguridad Industrial", "Departamentos Operaciones CNA I y CNA II"],
+        respuesta: 2,
+    },
+    {
+        pregunta: "¿Quién debe comunicar el inicio y fin de trabajos que liberan humos y pueden activar detectores de incendio?",
+        opciones: ["Jefe de Turno", "Oficial de Radioprotección", "Técnico de Seguridad Industrial", "Responsable de la tarea"],
+        respuesta: 3,
+    },
+    {
+        pregunta: "¿Cuántas alarmas acústicas se disponen en la CNA II?",
+        opciones: ["3", "4", "5", "6"],
+        respuesta: 2,
+    },
+    {
+        pregunta: "¿Qué significa la alarma 'General'?",
+        opciones: ["Acción Urgente", "Acción Preventiva", "Concentración en los Puntos de Reunión", "Emergencia Convencional"],
+        respuesta: 2,
+    },
+    {
+        pregunta: "¿Qué acción se debe tomar ante una alarma de 'Fuga'?",
+        opciones: ["Abandonar normalmente el local", "Concentrarse en los Puntos de Reunión", "Abandonar rápidamente el local", "Acudir al lugar del evento"],
+        respuesta: 2,
+    },
+    {
+        pregunta: "¿Qué acción se debe tomar ante una alarma de 'Evacuación'?",
+        opciones: ["Abandonar rápidamente el local", "Abandonar normalmente el local", "Concentrarse en los Puntos de Reunión", "Acudir al lugar del evento"],
+        respuesta: 1,
+    },
+    {
+        pregunta: "¿Quién debe acudir al lugar del evento ante una acústica de 'Incendio'?",
+        opciones: ["Oficial de Radioprotección", "Técnico de Seguridad Industrial", "Personal de la Brigada de Emergencia", "Departamentos Operaciones CNA I y CNA II"],
+        respuesta: 2,
+    },
+        {
+        pregunta: "¿En qué tipo de alarma se deben usar las salidas de emergencia?",
+        opciones: ["Evacuación", "Fuga", "Incendio", "General"],
+        respuesta: 1,
+    },
+    {
+        pregunta: "¿Qué se debe hacer si se abandona ZRC por puertas de emergencia durante una fuga?",
+        opciones: ["Regresar inmediatamente", "Permanecer fuera de ZRC y esperar instrucciones", "Dirigirse a los Puntos de Reunión", "Buscar refugio en otro edificio"],
+        respuesta: 1,
+    },
+    {
+        pregunta: "¿Qué señal indica la necesidad de concentrarse en los Puntos de Reunión?",
+        opciones: ["Alarma General", "Alarma de Fuga", "Alarma de Evacuación", "Alarma de Intrusión"],
+        respuesta: 0,
+    },
+    {
+        pregunta: "¿Qué acción realiza el Oficial de Radioprotección durante una alarma de Evacuación en Locales de Servicio del Reactor?",
+        opciones: ["Emite la alarma acústica", "Verifica la no permanencia de personal en la esfera de contención", "Dirige la Brigada de Emergencia", "Emite sirenas externas"],
+        respuesta: 1,
+    },
+    {
+        pregunta: "¿Qué sistema se utiliza para anunciar la inhabilitación de un recinto?",
+        opciones: ["Sistema de Alerta Pública", "Sistema de Buscapersonas", "Sistemas de Comunicación (MD o CYC)", "Sistema SDA"],
+        respuesta: 1,
+    },
+    {
+        pregunta: "¿Qué debe hacer el personal al escuchar la alarma de Intrusión?",
+        opciones: ["Abandonar el edificio", "Dirigirse a los Puntos de Reunión", "Permanecer en su lugar de trabajo o buscar refugio", "Ayudar a la Brigada de Emergencia"],
+        respuesta: 2,
+    },
+    {
+        pregunta: "¿Quién convoca a la Brigada de Emergencia ante un incendio?",
+        opciones: ["Oficial de Radioprotección", "Técnico de Seguridad Industrial", "Jefe de Turno CNA I o CNA II", "Operador del Sistema Primario"],
+        respuesta: 2,
+    },
+    {
+        pregunta: "¿Qué se debe hacer si se activa un detector de incendio por trabajos con humos?",
+        opciones: ["Evacuar inmediatamente", "Ignorar la alarma", "Comunicar al Jefe de Turno para verificar la falsa alarma", "Dirigirse a los Puntos de Reunión"],
+        respuesta: 2,
+    },
+    {
+        pregunta: "¿Quién verifica el cierre de puertas de emergencia durante una alarma de Fuga?",
+        opciones: ["Personal de la Sección Radioprotección", "Personal de la Brigada de Emergencia", "Personal del Departamento de Protección Física", "Personal de Sala de Control"],
+        respuesta: 0,
+    },
+    {
+        pregunta: "¿Qué debe hacer sala de control si se recibe un aviso falso de incendio?",
+        opciones: ["Ignorar la alarma", "Evacuar inmediatamente", "Comunicar la causa por altavoces", "Dirigirse a los Puntos de Reunión"],
+        respuesta: 2,
+    },
+    {
+        pregunta: "¿Qué se debe hacer si se activa un detector de incendio por trabajos con humos?",
+        opciones: ["Evacuar inmediatamente", "Ignorar la alarma", "Comunicar al Jefe de Turno para verificar la falsa alarma", "Dirigirse a los Puntos de Reunión"],
         respuesta: 2,
     }
 ];
@@ -82,34 +162,6 @@ const grupo3Preguntas = [
     }
 ];
 
-const grupo4Preguntas = [
-    {
-        pregunta: "¿Cuál es el animal terrestre más grande?",
-        opciones: ["Ballena", "Jirafa", "Elefante", "Hipopótamo"],
-        respuesta: 2,
-    },
-    {
-        pregunta: "¿Qué idioma se habla en Brasil?",
-        opciones: ["Español", "Inglés", "Portugués", "Francés"],
-        respuesta: 2,
-    },
-    {
-        pregunta: "¿Quién escribió 'Romeo y Julieta'?",
-        opciones: ["Dickens", "Shakespeare", "Austen", "Tolstói"],
-        respuesta: 1,
-    },
-    {
-        pregunta: "¿Cuál es la capital de Canadá?",
-        opciones: ["Toronto", "Montreal", "Vancouver", "Ottawa"],
-        respuesta: 3,
-    },
-    {
-        pregunta: "¿Qué planeta es conocido como el 'planeta rojo'?",
-        opciones: ["Venus", "Marte", "Júpiter", "Saturno"],
-        respuesta: 1,
-    }
-];
-
 let preguntas = [];
 let preguntaActual = 0;
 let puntaje = 0;
@@ -135,10 +187,17 @@ document.querySelectorAll(".tema-btn").forEach(btn => {
 });
 
 function seleccionarPreguntasAleatorias(tema) {
-    if (tema === "grupo1") preguntas = [...grupo1Preguntas];
-    else if (tema === "grupo2") preguntas = [...grupo2Preguntas];
-    else if (tema === "grupo3") preguntas = [...grupo3Preguntas];
-    else if (tema === "grupo4") preguntas = [...grupo4Preguntas];
+    let preguntasDisponibles = [];
+
+    if (tema === "grupo1") preguntasDisponibles = [...grupo1Preguntas];
+    else if (tema === "grupo2") preguntasDisponibles = [...grupo2Preguntas];
+    else if (tema === "grupo3") preguntasDisponibles = [...grupo3Preguntas];
+
+    preguntas = [];
+    for (let i = 0; i < 5; i++) {
+        const indiceAleatorio = Math.floor(Math.random() * preguntasDisponibles.length);
+        preguntas.push(preguntasDisponibles.splice(indiceAleatorio, 1)[0]);
+    }
 }
 
 function mostrarPregunta() {
@@ -164,7 +223,8 @@ function mostrarPregunta() {
 
     document.getElementById("resultado").textContent = "";
     actualizarBotonesNavegacion();
-
+    document.getElementById("reiniciar-btn").style.display = "none";
+    
     anime({
         targets: '#quiz-container',
         opacity: [0, 1],
@@ -247,7 +307,7 @@ function mostrarResultadoFinal() {
 
     let resultadoTexto = `Tu puntaje final fue: ${puntaje} de 100<br><br>`;
     for (let i = 0; i < preguntas.length; i++) {
-        resultadoTexto += `Pregunta ${i + 1}: ${puntajePorPregunta[i]} puntos<br>`;
+        resultadoTexto += `<p>Pregunta ${i + 1}: ${puntajePorPregunta[i]} puntos</p>`;
     }
 
     document.getElementById("resultado").innerHTML = resultadoTexto;
