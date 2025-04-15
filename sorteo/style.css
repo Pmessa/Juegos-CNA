@@ -1,58 +1,124 @@
 body {
-    font-family: sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url(../preguntas/img/Imagen1.png);
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f4f4f4;
-    margin: 0;
-}
-
-.container {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    color: #fff;
     text-align: center;
 }
 
-label {
-    display: block;
-    margin-bottom: 8px;
+.container {
+    display: flex;
+    width: 80vw;
+    height: 80vh;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.left-panel {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 3rem;
+}
+
+.logo {
+    width: 150px; /* Ajustar el ancho del logo */
+    margin-bottom: 1rem; /* Agregar margen inferior */
+}
+
+.logo img {
+    width: 100%; /* Asegurar que la imagen se ajuste al contenedor */
+    display: block; /* Evitar espacios en blanco innecesarios */
+}
+
+.left-panel h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.2rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+.left-panel h2 {
+    margin-bottom: 1.5rem;
+    color: #e0e0e0;
     font-weight: bold;
 }
 
-input[type="text"] {
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 250px;
-    box-sizing: border-box;
+.input-group,
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 80%;
+}
+
+#nombre {
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
 }
 
 button {
-    padding: 12px 20px;
-    background-color: #007bff;
-    color: white;
+    padding: 1rem;
+    font-size: 1rem;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
+    background-color: #64B5F6;
+    color: #fff;
     cursor: pointer;
-    font-size: 16px;
     transition: background-color 0.3s ease;
-    margin-top: 10px;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #1E88E5;
 }
 
-.oculto {
-    display: none;
+.right-panel {
+    width: 80%;
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 0 10px 10px 0;
 }
 
-#mensaje-participacion {
-    margin-top: 20px;
-    font-weight: bold;
-    color: green;
+.right-panel .participant {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 0.5rem;
+    border-radius: 4px;
+    color: #333;
+    transition: transform 0.3s ease;
+}
+
+.ganador-mostrado {
+    position: absolute;
+    font-size: 3rem;
+    color: #2E7D32;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    border-radius: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#reiniciar {
+    background-color: #ff6f61;
+}
+
+#reiniciar:hover {
+    background-color: #e53935;
 }
