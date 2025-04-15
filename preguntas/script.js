@@ -1,33 +1,5 @@
 const grupo1Preguntas = [
     {
-        pregunta: "¿Cuál es la capital de Francia?",
-        opciones: ["Londres", "Madrid", "París", "Berlín"],
-        respuesta: 2,
-    },
-    {
-        pregunta: "¿En qué año se descubrió América?",
-        opciones: ["1492", "1620", "1776", "1812"],
-        respuesta: 0,
-    },
-    {
-        pregunta: "¿Cuál es el río más largo del mundo?",
-        opciones: ["Nilo", "Amazonas", "Yangtsé", "Misisipi"],
-        respuesta: 1,
-    },
-    {
-        pregunta: "¿Quién pintó la Mona Lisa?",
-        opciones: ["Van Gogh", "Picasso", "Da Vinci", "Rembrandt"],
-        respuesta: 2,
-    },
-    {
-        pregunta: "¿Cuántos planetas hay en el sistema solar?",
-        opciones: ["7", "8", "9", "10"],
-        respuesta: 1,
-    }
-];
-
-const grupo2Preguntas = [
-    {
         pregunta: "¿Quién es responsable de emitir las alarmas acústicas desde la Sala de Control?",
         opciones: ["Departamento de Protección Física", "Departamento de Radioprotección", "Departamentos Operaciones CNA I y CNA II", "Departamento de Seguridad Industrial"],
         respuesta: 2,
@@ -38,24 +10,9 @@ const grupo2Preguntas = [
         respuesta: 2,
     },
     {
-        pregunta: "¿Qué departamento coloca y retira la señalización en accesos de ZRC durante una alarma de Evacuación?",
-        opciones: ["Departamento de Protección Física", "Departamento de Radioprotección", "Departamento de Seguridad Industrial", "Departamentos Operaciones CNA I y CNA II"],
-        respuesta: 1,
-    },
-    {
-        pregunta: "¿Qué departamento coloca y retira la señalización en accesos de Zona Convencional durante una alarma de Evacuación?",
-        opciones: ["Departamento de Protección Física", "Departamento de Radioprotección", "Departamento de Seguridad Industrial", "Departamentos Operaciones CNA I y CNA II"],
-        respuesta: 2,
-    },
-    {
         pregunta: "¿Quién debe comunicar el inicio y fin de trabajos que liberan humos y pueden activar detectores de incendio?",
         opciones: ["Jefe de Turno", "Oficial de Radioprotección", "Técnico de Seguridad Industrial", "Responsable de la tarea"],
         respuesta: 3,
-    },
-    {
-        pregunta: "¿Cuántas alarmas acústicas se disponen en la CNA II?",
-        opciones: ["3", "4", "5", "6"],
-        respuesta: 2,
     },
     {
         pregunta: "¿Qué significa la alarma 'General'?",
@@ -77,8 +34,8 @@ const grupo2Preguntas = [
         opciones: ["Oficial de Radioprotección", "Técnico de Seguridad Industrial", "Personal de la Brigada de Emergencia", "Departamentos Operaciones CNA I y CNA II"],
         respuesta: 2,
     },
-        {
-        pregunta: "¿En qué tipo de alarma se deben usar las salidas de emergencia?",
+    {
+        pregunta: "¿En qué tipo de alarma se pueden usar las salidas de emergencia?",
         opciones: ["Evacuación", "Fuga", "Incendio", "General"],
         respuesta: 1,
     },
@@ -88,19 +45,9 @@ const grupo2Preguntas = [
         respuesta: 1,
     },
     {
-        pregunta: "¿Qué señal indica la necesidad de concentrarse en los Puntos de Reunión?",
+        pregunta: "¿Qué alarma la necesidad de concentrarse en los Puntos de Reunión?",
         opciones: ["Alarma General", "Alarma de Fuga", "Alarma de Evacuación", "Alarma de Intrusión"],
         respuesta: 0,
-    },
-    {
-        pregunta: "¿Qué acción realiza el Oficial de Radioprotección durante una alarma de Evacuación en Locales de Servicio del Reactor?",
-        opciones: ["Emite la alarma acústica", "Verifica la no permanencia de personal en la esfera de contención", "Dirige la Brigada de Emergencia", "Emite sirenas externas"],
-        respuesta: 1,
-    },
-    {
-        pregunta: "¿Qué sistema se utiliza para anunciar la inhabilitación de un recinto?",
-        opciones: ["Sistema de Alerta Pública", "Sistema de Buscapersonas", "Sistemas de Comunicación (MD o CYC)", "Sistema SDA"],
-        respuesta: 1,
     },
     {
         pregunta: "¿Qué debe hacer el personal al escuchar la alarma de Intrusión?",
@@ -109,18 +56,13 @@ const grupo2Preguntas = [
     },
     {
         pregunta: "¿Quién convoca a la Brigada de Emergencia ante un incendio?",
-        opciones: ["Oficial de Radioprotección", "Técnico de Seguridad Industrial", "Jefe de Turno CNA I o CNA II", "Operador del Sistema Primario"],
-        respuesta: 2,
+        opciones: ["Jefe de Turno CNA I o CNA II", "Operador del Sistema Primario"],
+        respuesta: 0,
     },
     {
-        pregunta: "¿Qué se debe hacer si se activa un detector de incendio por trabajos con humos?",
+        pregunta: "¿Qué se debe hacer si se activa un detector de incendio por trabajos con polvo?",
         opciones: ["Evacuar inmediatamente", "Ignorar la alarma", "Comunicar al Jefe de Turno para verificar la falsa alarma", "Dirigirse a los Puntos de Reunión"],
         respuesta: 2,
-    },
-    {
-        pregunta: "¿Quién verifica el cierre de puertas de emergencia durante una alarma de Fuga?",
-        opciones: ["Personal de la Sección Radioprotección", "Personal de la Brigada de Emergencia", "Personal del Departamento de Protección Física", "Personal de Sala de Control"],
-        respuesta: 0,
     },
     {
         pregunta: "¿Qué debe hacer sala de control si se recibe un aviso falso de incendio?",
@@ -128,42 +70,108 @@ const grupo2Preguntas = [
         respuesta: 2,
     },
     {
-        pregunta: "¿Qué se debe hacer si se activa un detector de incendio por trabajos con humos?",
-        opciones: ["Evacuar inmediatamente", "Ignorar la alarma", "Comunicar al Jefe de Turno para verificar la falsa alarma", "Dirigirse a los Puntos de Reunión"],
-        respuesta: 2,
-    }
-];
-
-const grupo3Preguntas = [
-    {
-        pregunta: "¿Cuál es el planeta más cercano al sol?",
-        opciones: ["Venus", "Marte", "Mercurio", "Júpiter"],
+        pregunta: "¿Cuál es el propósito principal de los Puntos de Reunión en la CNA?",
+        opciones: ["Contabilizar vehículos", "Distribuir Iodo", "Separar personal contaminado y no contaminado", "Medir radiación"],
         respuesta: 2,
     },
     {
-        pregunta: "¿Qué elemento químico tiene el símbolo 'O'?",
-        opciones: ["Oro", "Oxígeno", "Osmio", "Plomo"],
-        respuesta: 1,
+        pregunta: "¿Cuántos Puntos de Reunión se mencionan en el documento?",
+        opciones: ["3", "8", "10", "6"],
+        respuesta: 3,
     },
     {
-        pregunta: "¿Quién descubrió la penicilina?",
-        opciones: ["Einstein", "Newton", "Fleming", "Curie"],
-        respuesta: 2,
-    },
-    {
-        pregunta: "¿Cuál es el hueso más largo del cuerpo humano?",
-        opciones: ["Fémur", "Tibia", "Húmero", "Radio"],
+        pregunta: "¿Dónde se encuentra ubicado el Punto de Reunión Nº 1?",
+        opciones: ["Comedor de Planta", "Sala de Visitas", "Predio del Edificio del Simulador", "Sala de Control CNA II"],
         respuesta: 0,
     },
     {
-        pregunta: "¿En qué país se encuentra la Gran Muralla China?",
-        opciones: ["Japón", "Corea", "China", "Vietnam"],
+        pregunta: "¿Qué edificio se utiliza como Punto de Reunión Nº 2?",
+        opciones: ["Edificio UBA", "CICE", "Simulador", "Sala de Visitas Relaciones Públicas"],
+        respuesta: 1,
+    },
+    {
+        pregunta: "¿Dónde se encuentra el Punto de Reunión Nº 5?",
+        opciones: ["Edificio Simulador", "Comedor Planta", "Sala de Visitas", "Primer piso edificio portería principal (1UYE)"],
+        respuesta: 3,
+    },
+    {
+        pregunta: "¿Qué edificio se utiliza como Punto de Reunión Nº 6?",
+        opciones: ["Simulador", "CICE", "Sala de Visitas", "Edificio del Comedor de Planta"],
+        respuesta: 3,
+    },
+    {
+        pregunta: "¿Qué tipo de alarma requiere que el personal se dirija a los Puntos de Reunión?",
+        opciones: ["Alarma de Incendio", "Alarma de Intrusión", "Alarma de Fuga", "Alarma General"],
+        respuesta: 3,
+    },
+    {
+        pregunta: "¿Qué actitudes se esperan del personal durante una Alarma General?",
+        opciones: ["Pánico y confusión", "Desorden y caos", "Serenidad y orden", "Ignorar la alarma"],
         respuesta: 2,
-    }
-];
+    },
+    {
+        pregunta: "¿Quiénes deben acatar las indicaciones en los Puntos de Reunión?",
+        opciones: ["Solo visitas", "Solo personal de seguridad", "Solo coordinadores", "Todo el personal"],
+        respuesta: 3,
+    },
+    {
+        pregunta: "¿Cuándo se puede abandonar un Punto de Reunión?",
+        opciones: ["Cuando lo decida el personal", "Después de 5 minutos", "Durante la alarma roja", "Cuando el Coordinador lo determine"],
+        respuesta: 3,
+    },
+    {
+        pregunta: "¿Qué responsabilidad tiene el personal del Sitio CNA con respecto a las visitas durante una Alarma General?",
+        opciones: ["Ignorarlas", "Dejarlas en la entrada", "Llevarlas al Punto de Reunión Nº 1", "Enviarlas a casa"],
+        respuesta: 2,
+    },
+    {
+        pregunta: "¿A qué Punto de Reunión deben llevarse las visitas?",
+        opciones: ["Nº 2", "Nº 3", "Nº 6", "Nº 1"],
+        respuesta: 3,
+    },
+    {
+        pregunta: "¿Qué tareas pueden asignar los coordinadores a los asistentes?",
+        opciones: ["Ignorar la alarma", "Abandonar el punto", "Comunicación VHF y registro de personal"],
+        respuesta: 2,
+    },
+    {
+        pregunta: "¿Qué sistemas se utilizan para registrar al personal en los Puntos de Reunión?",
+        opciones: ["Solo VHF", "Solo planillas de vehículos", "Ninguno", "Formulario de Asistencia"],
+        respuesta: 3,
+    },
+    {
+        pregunta: "¿Cómo se establece la comunicación con el CICE desde los Puntos de Reunión?",
+        opciones: ["Por radio personal", "Por señales de humo", "Por mensajería", "Comunicación telefónica o VHF"],
+        respuesta: 3,
+    },
+    {
+        pregunta: "¿Cuándo se distribuyen los comprimidos de Ioduro de Potasio?",
+        opciones: ["Al llegar al punto", "Durante alarma de incendio", "Siempre", "Al declararse Alerta Verde"],
+        respuesta: 3,
+    },
+    {
+        pregunta: "¿Qué información se debe comunicar al CICE después de finalizar el registro de personas?",
+        opciones: ["Solo número de vehículos", "Solo número de plazas", "Nada", "Número de vehículos y plazas disponibles"],
+        respuesta: 3,
+    },
+    {
+        pregunta: "¿Qué alarma indica la necesidad de concentrarse en los Puntos de Reunión?",
+        opciones: ["Alarma General", "Alarma de Fuga", "Alarma de Evacuación", "Alarma de Intrusión"],
+        respuesta: 0,
+    },
+]
 
-const grupo4Preguntas = [
-
+const grupo2Preguntas = [
+    {
+        pregunta: "¿Qué debe hacer el personal al escuchar la alarma de Intrusión?",
+        opciones: ["Abandonar el edificio", "Dirigirse a los Puntos de Reunión", "Permanecer en su lugar de trabajo o buscar refugio", "Ayudar a la Brigada de Emergencia"],
+        respuesta: 2,
+    },
+    {
+        pregunta: "¿Qué se debe hacer si se activa un detector de incendio por trabajos con polvo?",
+        opciones: ["Evacuar inmediatamente", "Ignorar la alarma", "Comunicar al Jefe de Turno para verificar la falsa alarma", "Dirigirse a los Puntos de Reunión"],
+        respuesta: 2,
+    },
     {
         pregunta: "¿Quién debe comunicar el inicio y fin de trabajos que liberan humos y pueden activar detectores de incendio?",
         opciones: ["Jefe de Turno", "Oficial de Radioprotección", "Técnico de Seguridad Industrial", "Responsable de la tarea"],
@@ -175,6 +183,11 @@ const grupo4Preguntas = [
         respuesta: 2,
     },
     {
+        pregunta: "¿Qué se debe hacer si se abandona ZRC por puertas de emergencia durante una fuga?",
+        opciones: ["Regresar inmediatamente", "Permanecer fuera de ZRC y esperar instrucciones", "Dirigirse a los Puntos de Reunión", "Buscar refugio en otro edificio"],
+        respuesta: 1,
+    },
+    {
         pregunta: "¿Qué acción se debe tomar ante una alarma de 'Fuga'?",
         opciones: ["Abandonar normalmente el local", "Concentrarse en los Puntos de Reunión", "Abandonar rápidamente el local", "Acudir al lugar del evento"],
         respuesta: 2,
@@ -184,32 +197,52 @@ const grupo4Preguntas = [
         opciones: ["Abandonar rápidamente el local", "Abandonar normalmente el local", "Concentrarse en los Puntos de Reunión", "Acudir al lugar del evento"],
         respuesta: 1,
     },
-        {
-        pregunta: "¿En qué tipo de alarma se deben usar las salidas de emergencia?",
+    {
+        pregunta: "¿En qué tipo de alarma se pueden usar las salidas de emergencia?",
         opciones: ["Evacuación", "Fuga", "Incendio", "General"],
         respuesta: 1,
     },
     {
-        pregunta: "¿Qué se debe hacer si se abandona ZRC por puertas de emergencia durante una fuga?",
-        opciones: ["Regresar inmediatamente", "Permanecer fuera de ZRC y esperar instrucciones", "Dirigirse a los Puntos de Reunión", "Buscar refugio en otro edificio"],
-        respuesta: 1,
-    },
-    {
-        pregunta: "¿Qué señal indica la necesidad de concentrarse en los Puntos de Reunión?",
+        pregunta: "¿Qué alarma indica la necesidad de concentrarse en los Puntos de Reunión?",
         opciones: ["Alarma General", "Alarma de Fuga", "Alarma de Evacuación", "Alarma de Intrusión"],
         respuesta: 0,
     },
     {
-        pregunta: "¿Qué debe hacer el personal al escuchar la alarma de Intrusión?",
-        opciones: ["Abandonar el edificio", "Dirigirse a los Puntos de Reunión", "Permanecer en su lugar de trabajo o buscar refugio", "Ayudar a la Brigada de Emergencia"],
+        pregunta: "¿Dónde se encuentra ubicado el Punto de Reunión Nº 1?",
+        opciones: ["Comedor de Planta", "Sala de Visitas", "Predio del Edificio del Simulador", "Sala de Control CNA II"],
         respuesta: 2,
     },
     {
-        pregunta: "¿Qué se debe hacer si se activa un detector de incendio por trabajos con humos?",
-        opciones: ["Evacuar inmediatamente", "Ignorar la alarma", "Comunicar al Jefe de Turno para verificar la falsa alarma", "Dirigirse a los Puntos de Reunión"],
+        pregunta: "¿Qué edificio se utiliza como Punto de Reunión Nº 2?",
+        opciones: ["Edificio UBA", "CICE", "Simulador", "Sala de Visitas Relaciones Públicas"],
+        respuesta: 3,
+    },
+    {
+        pregunta: "¿Qué edificio se utiliza como Punto de Reunión Nº 6 de contratistas?",
+        opciones: ["Sala de Control", "CICE", "Sala de Visitas", "Edificio del Comedor de Planta"],
+        respuesta: 3,
+    },
+    {
+        pregunta: "¿Qué tipo de alarma requiere que el personal se dirija a los Puntos de Reunión?",
+        opciones: ["Alarma de Incendio", "Alarma de Intrusión", "Alarma de Fuga", "Alarma General"],
+        respuesta: 3,
+    },
+    {
+        pregunta: "¿Qué actitudes se esperan del personal durante una Alarma General?",
+        opciones: ["Pánico y confusión", "Desorden y caos", "Serenidad y orden", "Ignorar la alarma"],
         respuesta: 2,
     },
-];
+    {
+        pregunta: "¿Quiénes deben acatar las indicaciones en los Puntos de Reunión?",
+        opciones: ["Solo visitas", "Solo personal de seguridad", "Solo coordinadores", "Todo el personal"],
+        respuesta: 3,
+    },
+    {
+        pregunta: "¿Cuándo se puede abandonar un Punto de Reunión?",
+        opciones: ["Cuando lo decida el personal", "Después de 5 minutos", "Durante la alarma roja", "Cuando el Coordinador lo determine"],
+        respuesta: 3,
+    },
+]
 
 let preguntas = [];
 let preguntaActual = 0;
@@ -229,35 +262,17 @@ document.querySelectorAll(".tipo-btn").forEach(btn => {
     btn.addEventListener("click", () => {
         const tipo = btn.dataset.tipo;
         if (tipo === "cna") {
-            document.getElementById("seleccion-tipo-container").style.display = "none";
-            document.getElementById("temas-container").style.display = "block";
+            seleccionarPreguntasAleatorias(grupo1Preguntas);
         } else if (tipo === "contratista") {
-            seleccionarPreguntasAleatorias("grupo4");
-            document.getElementById("seleccion-tipo-container").style.display = "none";
-            document.getElementById("quiz-container").style.display = "block";
-            mostrarPregunta();
+            seleccionarPreguntasAleatorias(grupo2Preguntas);
         }
-    });
-});
-
-document.querySelectorAll(".tema-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-        const tema = btn.dataset.tema;
-        seleccionarPreguntasAleatorias(tema);
-        document.getElementById("temas-container").style.display = "none";
+        document.getElementById("seleccion-tipo-container").style.display = "none";
         document.getElementById("quiz-container").style.display = "block";
         mostrarPregunta();
     });
 });
 
-function seleccionarPreguntasAleatorias(tema) {
-    let preguntasDisponibles = [];
-
-    if (tema === "grupo1") preguntasDisponibles = [...grupo1Preguntas];
-    else if (tema === "grupo2") preguntasDisponibles = [...grupo2Preguntas];
-    else if (tema === "grupo3") preguntasDisponibles = [...grupo3Preguntas];
-    else if (tema === "grupo4") preguntasDisponibles = [...grupo4Preguntas];
-
+function seleccionarPreguntasAleatorias(preguntasDisponibles) {
     preguntas = [];
     for (let i = 0; i < 5; i++) {
         const indiceAleatorio = Math.floor(Math.random() * preguntasDisponibles.length);
@@ -289,7 +304,7 @@ function mostrarPregunta() {
     document.getElementById("resultado").textContent = "";
     actualizarBotonesNavegacion();
     document.getElementById("reiniciar-btn").style.display = "none";
-    
+
     anime({
         targets: '#quiz-container',
         opacity: [0, 1],
