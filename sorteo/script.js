@@ -103,39 +103,7 @@ function mostrarGanador(ganador) {
     const ganadorDiv = document.createElement('div');
     ganadorDiv.textContent = ganador;
     ganadorDiv.classList.add('ganador-mostrado');
-    ganadorDiv.style.fontSize = '2rem';
-    ganadorDiv.style.color = '#2E7D32';
-    ganadorDiv.style.zIndex = '10';
     participantsArea.appendChild(ganadorDiv);
-    moverGanador(ganadorDiv);
-}
-
-function moverGanador(ganadorDiv) {
-    const maxWidth = participantsArea.clientWidth - ganadorDiv.clientWidth;
-    const maxHeight = participantsArea.clientHeight - ganadorDiv.clientHeight;
-
-    let x = Math.random() * maxWidth;
-    let y = Math.random() * maxHeight;
-    let dx = (Math.random() - 0.5) * 2;
-    let dy = (Math.random() - 0.5) * 2;
-    let rotation = 0;
-    let dRotation = (Math.random() - 0.5) * 0.5;
-
-    function animateGanador() {
-        x += dx;
-        y += dy;
-        rotation += dRotation;
-
-        if (x < 0) x = 0;
-        if (y < 0) y = 0;
-        if (x > maxWidth) x = maxWidth;
-        if (y > maxHeight) y = maxHeight;
-
-        ganadorDiv.style.transform = `translate(${x}px, ${y}px) rotate(${rotation}deg)`;
-        requestAnimationFrame(animateGanador);
-    }
-
-    animateGanador();
 }
 
 function eliminarParticipante(nombre) {
