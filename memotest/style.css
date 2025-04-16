@@ -1,0 +1,226 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    min-height: 100vh;
+    background-image: url("../preguntas/img/Imagen1.png");
+    
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 600px; 
+}
+
+h1 {
+    color:#dcdcff;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-size: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+
+.difficulty-selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.difficulty-selection label {
+    font-weight: bold;
+    color: #34495e; /* Darker Blue */
+    font-size: 1.1em;
+}
+
+.difficulty-selection select {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #bdc3c7; /* Light Grey */
+    width: 100%;
+    font-size: 1em;
+    appearance: none; /* Quitar estilos por defecto del navegador */
+    background-image: linear-gradient(45deg, transparent 50%, gray 50%),
+                      linear-gradient(135deg, gray 50%, transparent 50%);
+    background-position: calc(100% - 20px) calc(1em + 2px),
+                         calc(100% - 15px) calc(1em + 2px);
+    background-size: 5px 5px, 5px 5px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.player-names-input {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.player-names-input label {
+    font-weight: bold;
+    color: #34495e;
+    font-size: 1.1em;
+}
+
+.player-names-input input {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #bdc3c7;
+    width: 100%;
+    font-size: 1em;
+}
+
+#start-game-button {
+    padding: 15px 30px;
+    font-size: 1.1em;
+    cursor: pointer;
+    background-color: #27ae60; /* Green */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#start-game-button:hover {
+    background-color: #219b56;
+    transform: scale(1.05);
+}
+
+.score-board {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.player-score {
+    font-weight: bold;
+    color: #7f8c8d; /* Grey */
+    font-size: 1em;
+}
+
+.turn-indicator {
+    font-style: italic;
+    color: #95a5a6; /* Light Grey */
+    margin-bottom: 25px;
+    font-size: 1em;
+}
+
+.memory-game {
+    display: grid;
+    grid-gap: 15px;
+    margin-bottom: 30px;
+}
+
+.memory-game.cols-3 {
+    grid-template-columns: repeat(3, 100px);
+}
+
+.memory-game.cols-4 {
+    grid-template-columns: repeat(4, 100px);
+}
+
+.memory-game.cols-5 {
+    grid-template-columns: repeat(4, 100px); /* Aunque sea 4x5, mantenemos 4 columnas */
+}
+
+.card {
+    width: 120px; /* Aumenta el ancho */
+    height: 120px; /* Aumenta el alto */
+    background-color: #ecf0f1; /* Very Light Grey */
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    transform-style: preserve-3d;
+}
+.card-back img {
+    width: 100%; 
+    height: 100%; /* Ajusta el alto al 80% del contenedor */
+    object-fit:cover; /* Asegura que la imagen se ajuste dentro sin recortarse, manteniendo su proporción */
+    border-radius: 8px;
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+/* .card.flipped .card-inner {
+    transform: rotateY(180deg);
+} */
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.card-front {
+    background-color: #fdfefe; /* White with a slight tint */
+    font-size: 2em;
+    color: #7f8c8d;
+}
+
+.card-back {
+    background-color: #3498db; /* Blue */
+    color: white;
+    transform: rotateY(180deg);
+    font-size: 2.5em;
+}
+
+.card.matched .card-back {
+    background-color: #2ecc71; /* Another Green */
+    color: white;
+}
+
+#reset-button {
+    padding: 12px 25px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #e74c3c; /* Red */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#reset-button:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}

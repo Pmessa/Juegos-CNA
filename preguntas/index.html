@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <title>PPE</title>
+</head>
+<body>
+    <main>
+        <div id="nombre-container">
+            <h1>PREPARACIÓN PARA EMERGENCIAS</h1>
+            <input type="text" id="nombre-input" placeholder="Tu nombre">
+            <button id="comenzar-btn">VAMOS A JUGAR!</button>
+        </div>
+        <div id="seleccion-tipo-container" style="display: none;">
+            <h1>¡BIENVENIDO AL JUEGO!</h1>
+            <div id="tipos">
+                <button class="tipo-btn" data-tipo="cna">CNA</button>
+                <button class="tipo-btn" data-tipo="contratista">CONTRATISTA</button>
+            </div>
+        </div>
+        <div id="quiz-container" style="display: none;">
+            <h2 id="pregunta"></h2>
+            <div id="opciones"></div>
+            <div id="flechas-container">
+                <div id="resultado"></div>
+                <button id="siguiente-btn" aria-label="Pregunta siguiente"><i class="fas fa-arrow-right"></i></button>
+            </div>
+            <button onclick="reiniciarJuego()" id="reiniciar-btn" aria-label="Reiniciar juego"><i class="fas fa-redo"></i></button>
+        </div>
+        <div id="confetti-container"></div> 
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>

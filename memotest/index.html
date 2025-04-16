@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PREPARACIÓN PARA EMERGENCIAS</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+</head>
+<body>
+    <h1>PREPARACIÓN PARA EMERGENCIAS</h1>
+    <main>
+        <div class="difficulty-selection">
+            <label for="difficulty">Seleccionar Dificultad:</label>
+            <select id="difficulty">
+                <option value="6">Fácil (4x3 - 6 pares)</option>
+                <option value="8" selected>Normal (4x4 - 8 pares)</option>
+                <option value="10">Difícil (4x5 - 10 pares)</option>
+            </select>
+        </div>
+        <div class="player-names-input">
+            <label for="player1-name">Jugador 1:</label>
+            <input type="text" id="player1-name" placeholder="Nombre del Jugador 1">
+            <label for="player2-name">Jugador 2:</label>
+            <input type="text" id="player2-name" placeholder="Nombre del Jugador 2">
+            <button id="start-game-button">Comenzar Juego</button>
+        </div>
+        <div class="score-board">
+            <div class="player-score"><span id="player1-name-display">Jugador 1</span>: <span id="score-player1">0</span></div>
+            <div class="player-score"><span id="player2-name-display">Jugador 2</span>: <span id="score-player2">0</span></div>
+        </div>
+        <div class="turn-indicator">Turno de: <span id="current-player-name">Jugador 1</span></div>
+        <div class="memory-game"></div>
+        <button id="reset-button">Reiniciar Juego</button>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

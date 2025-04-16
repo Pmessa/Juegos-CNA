@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="logo" id="logo"><img src="../preguntas/img/logoPpe.png" alt="logo Preparación para Emergencias"></div>
+            <h1>Sorteo </h1>
+            <h2>Preparación Para Emergencias</h2>
+            <br>
+            <div class="input-group">
+                <input type="text" id="nombre" placeholder="Ingresa tu nombre">
+            </div>
+            <div class="button-group">
+                <button id="participar">Participar</button>
+                <button id="sortear">Sortear</button>
+                <button id="reiniciar" aria-label="Reiniciar juego"><i class="fas fa-redo"></i></button>
+            </div>
+        </div>
+        <div class="right-panel" id="participants-area"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.min.js"></script>
+    <script src="confetti.browser.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
