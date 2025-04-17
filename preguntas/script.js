@@ -1,15 +1,5 @@
 const grupo1Preguntas = [
     {
-        pregunta: "¿Quién es responsable de emitir las alarmas acústicas desde la Sala de Control?",
-        opciones: ["Departamento de Protección Física", "Departamento de Radioprotección", "Departamentos Operaciones CNA I y CNA II", "Departamento de Seguridad Industrial"],
-        respuesta: 2,
-    },
-    {
-        pregunta: "¿Quién emite las sirenas externas del Sistema de Alerta Pública?",
-        opciones: ["Oficial de Radioprotección", "Técnico de Seguridad Industrial", "Oficial Protección Física o Auxiliar Protección Física", "Jefe de Turno"],
-        respuesta: 2,
-    },
-    {
         pregunta: "¿Quién debe comunicar el inicio y fin de trabajos que liberan humos y pueden activar detectores de incendio?",
         opciones: ["Jefe de Turno", "Oficial de Radioprotección", "Técnico de Seguridad Industrial", "Responsable de la tarea"],
         respuesta: 3,
@@ -30,11 +20,6 @@ const grupo1Preguntas = [
         respuesta: 1,
     },
     {
-        pregunta: "¿Quién debe acudir al lugar del evento ante una acústica de 'Incendio'?",
-        opciones: ["Oficial de Radioprotección", "Técnico de Seguridad Industrial", "Personal de la Brigada de Emergencia", "Departamentos Operaciones CNA I y CNA II"],
-        respuesta: 2,
-    },
-    {
         pregunta: "¿En qué tipo de alarma se pueden usar las salidas de emergencia?",
         opciones: ["Evacuación", "Fuga", "Incendio", "General"],
         respuesta: 1,
@@ -45,7 +30,7 @@ const grupo1Preguntas = [
         respuesta: 1,
     },
     {
-        pregunta: "¿Qué alarma la necesidad de concentrarse en los Puntos de Reunión?",
+        pregunta: "¿Qué alarma indica la necesidad de concentrarse en los Puntos de Reunión?",
         opciones: ["Alarma General", "Alarma de Fuga", "Alarma de Evacuación", "Alarma de Intrusión"],
         respuesta: 0,
     },
@@ -55,39 +40,14 @@ const grupo1Preguntas = [
         respuesta: 2,
     },
     {
-        pregunta: "¿Quién convoca a la Brigada de Emergencia ante un incendio?",
-        opciones: ["Jefe de Turno CNA I o CNA II", "Operador del Sistema Primario"],
-        respuesta: 0,
-    },
-    {
-        pregunta: "¿Qué se debe hacer si se activa un detector de incendio por trabajos con polvo?",
-        opciones: ["Evacuar inmediatamente", "Ignorar la alarma", "Comunicar al Jefe de Turno para verificar la falsa alarma", "Dirigirse a los Puntos de Reunión"],
-        respuesta: 2,
-    },
-    {
-        pregunta: "¿Qué debe hacer sala de control si se recibe un aviso falso de incendio?",
-        opciones: ["Ignorar la alarma", "Evacuar inmediatamente", "Comunicar la causa por altavoces", "Dirigirse a los Puntos de Reunión"],
-        respuesta: 2,
-    },
-    {
-        pregunta: "¿Cuál es el propósito principal de los Puntos de Reunión en la CNA?",
-        opciones: ["Contabilizar vehículos", "Distribuir Iodo", "Separar personal contaminado y no contaminado", "Medir radiación"],
-        respuesta: 2,
-    },
-    {
-        pregunta: "¿Cuántos Puntos de Reunión se mencionan en el documento?",
-        opciones: ["3", "8", "10", "6"],
-        respuesta: 3,
-    },
-    {
         pregunta: "¿Dónde se encuentra ubicado el Punto de Reunión Nº 1?",
         opciones: ["Comedor de Planta", "Sala de Visitas", "Predio del Edificio del Simulador", "Sala de Control CNA II"],
-        respuesta: 0,
+        respuesta: 2,
     },
     {
         pregunta: "¿Qué edificio se utiliza como Punto de Reunión Nº 2?",
         opciones: ["Edificio UBA", "CICE", "Simulador", "Sala de Visitas Relaciones Públicas"],
-        respuesta: 1,
+        respuesta: 3,
     },
     {
         pregunta: "¿Dónde se encuentra el Punto de Reunión Nº 5?",
@@ -135,11 +95,6 @@ const grupo1Preguntas = [
         respuesta: 2,
     },
     {
-        pregunta: "¿Qué sistemas se utilizan para registrar al personal en los Puntos de Reunión?",
-        opciones: ["Solo VHF", "Solo planillas de vehículos", "Ninguno", "Formulario de Asistencia"],
-        respuesta: 3,
-    },
-    {
         pregunta: "¿Cómo se establece la comunicación con el CICE desde los Puntos de Reunión?",
         opciones: ["Por radio personal", "Por señales de humo", "Por mensajería", "Comunicación telefónica o VHF"],
         respuesta: 3,
@@ -147,11 +102,6 @@ const grupo1Preguntas = [
     {
         pregunta: "¿Cuándo se distribuyen los comprimidos de Ioduro de Potasio?",
         opciones: ["Al llegar al punto", "Durante alarma de incendio", "Siempre", "Al declararse Alerta Verde"],
-        respuesta: 3,
-    },
-    {
-        pregunta: "¿Qué información se debe comunicar al CICE después de finalizar el registro de personas?",
-        opciones: ["Solo número de vehículos", "Solo número de plazas", "Nada", "Número de vehículos y plazas disponibles"],
         respuesta: 3,
     },
     {
